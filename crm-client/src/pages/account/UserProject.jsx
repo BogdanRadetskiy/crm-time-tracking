@@ -1,40 +1,25 @@
-import { Link } from 'react-router-dom'
+import React, {useState} from "react";
+import '../modal/UserProject.css'
+import Modal from "../modal/Modal";
 
+const UserProject = () => {
+    const [modalActive, setModalActive] = useState(true)
+    return (
+        <div className='UserProject'>
+            <main>
+                <button className='open-btn' onClick={() => setModalActive(true)}>Project 1</button>
+            </main>
+            <main>
+                <button className='open-btn' onClick={() => setModalActive(true)}>Project 2</button>
+            </main>
+            <main>
+                <button className='open-btn' onClick={() => setModalActive(true)}>Project 3</button>
+            </main>
+            <Modal active={modalActive} setActive={setModalActive}>
 
-import styled from 'styled-components'
+            </Modal>
+        </div>
+    );
+};
 
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 0px;
-`
-
-const Wrapper = styled.div`
-    padding: 0 40px 40px 40px;
-`
-
-
-function UserProject() {
-          
-
-     return (
-    <Wrapper>
-        <Button>
-             <Link  to="" className="btn btn-primary">
-               Project 1
-             </Link>
-        </Button>
-        <Button>
-              <Link  to="" className="btn btn-primary">
-               Project 2
-        </Link>
-        </Button>
-        <Button>
-              <Link  to="" className="btn btn-primary">
-               Project 3
-        </Link>
-        </Button>
-     </Wrapper>
-     );
-}
-export default UserProject
+export default UserProject;
