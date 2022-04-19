@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { NavBar } from '../components'
-import { MoviesList, MoviesInsert, MoviesUpdate, ConfirmRegistration, ResetPassword, ConfirmNewPassword, UserLogin, UserRegistration, UserAccount, ChangePassword, UpdateAccount, UsersList, UpdateUserAccount, UserProject} from '../pages'
+import { MoviesList, MoviesInsert, MoviesUpdate, ConfirmRegistration, ResetPassword, ConfirmNewPassword, UserLogin, UserRegistration, UserAccount, ChangePassword, UpdateAccount, UsersList, UpdateUserAccount, UserProject, ProjectsInsert } from '../pages'
 import { authenticationService } from '../services/authentication'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -32,6 +32,7 @@ function App() {
                         <Route path="/users/create" exact component={MoviesInsert} />
                         <Route path="/users/update/:id" exact component={UpdateUserAccount} />
                         <Route path="/user/project" exact component={UserProject} />
+                        <Route path="/projects/create" exact component={ProjectsInsert} />
                     </>}
                 </>}
                     <Route path="/auth/login" exact component={UserLogin} />

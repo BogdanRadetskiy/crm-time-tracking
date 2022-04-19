@@ -9,9 +9,8 @@ p {
 }
 
 .open-btn {
-    margin: 10px 20px;
+    margin: 10px 10px;
     font-size: 2rem;
     padding: 10px 24px;
     cursor: pointer;
-    float: left;
 }
