@@ -81,7 +81,7 @@ function MoviesInsert() {
                 <Label>Time: </Label>
                 <InputText
                     type="text"
-    {...register("time", { required: true, pattern: /([0-9]{1,2}):([0-9]{2})/ })}
+                    {...register("time", { required: true, pattern: /([0-9]{1,2}):([0-9]{2})/ })}
                 />
                 {errors.time && <p>Please check the Time</p>}
 

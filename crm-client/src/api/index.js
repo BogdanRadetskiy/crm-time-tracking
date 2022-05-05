@@ -97,6 +97,11 @@ export const deleteProjectById = id => api.delete(`/projects/${id}`)
 export const getProjectById = id => api.get(`/projects/${id}`)
 export const getProject = () => api.get(`/projects`)
 
+export const insertProjectData = payload => api.post(`/projectsData`, payload)
+export const updateProjectData = (id, payload) => api.put(`/projectsData/${id}`, payload)
+export const getProjectsData = () => api.get(`/projectsData`)
+export const deleteProjectsData = id => api.delete(`/projectsData/${id}`)
+
 const apis = {
     insertMovie,
     getAllMovies,
@@ -122,7 +127,11 @@ const apis = {
     updateProjectById, 
     deleteProjectById,
     getProjectById,
-    getProject
+    getProject,
+    insertProjectData,
+    updateProjectData,
+    getProjectsData,
+    deleteProjectsData
 }
 
 export default apis

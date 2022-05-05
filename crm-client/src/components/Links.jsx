@@ -31,7 +31,7 @@ function Links(props) {
     return (
         <React.Fragment>
             <Link to="/" className="navbar-brand">
-                MERN Cinema
+                CRM
             </Link>
             <Collapse>
                 {isLogged &&
