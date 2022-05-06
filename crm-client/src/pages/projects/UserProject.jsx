@@ -1,92 +1,17 @@
 import React, {useState, useCallback, useEffect} from "react";
-import { useForm } from "react-hook-form";
-import '../modal/UserProject.css'
 import Modal from "../modal/Modal";
 import api from '../../api'
 import ReactTable from 'react-table'
-
 import { ToastContainer, toast } from 'react-toastify';
+import { useForm } from "react-hook-form";
+import '../modal/UserProject.css'
 import 'react-toastify/dist/ReactToastify.css';
-
-import '../modal/calendar.css'
-import styled from 'styled-components'
-
 import 'react-table/react-table.css'
+import '../modal/calendar.css'
+import '../modal/UserProject.css'
+import {Update,Delete,ButtonProject,ButtonAdd,Wrapper,Title,Label,InputText,ButtonSave,CancelButton,Button} from '../projects/projectStyle/UserProjectStyle.jsx'
+  
 
-const Label = styled.label`
-    margin-top: 50px;
-    margin: 15px 15px 15px 5px;
-    font-size: 35px;
-    
-`
-const Title = styled.h1.attrs({
-    className: 'h1',
-})`
-    text-align: center;
-`
-
-const InputText = styled.input.attrs({
-    className: 'form',
-})`
-    width: 250px;
-    height: 8%;
-    font-size: 30px;
-    display: block;
-`
-const ButtonSave = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 20px 15px 15px 420px;
-    width: 12%;
-    height: 12%;
-    font-size: 20px;
-`
-
-const CancelButton = styled.a.attrs({
-    className: `btn btn-danger`,
-})`
-    margin: 20px 15px 15px 5px;
-    width: 12%;
-    height: 12%;
-    font-size: 20px;   
-`
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 0px 15px 15px 42px;
-    width: 12%;
-    height: 12%;
-    font-size: 30px;
-`
-const ButtonAdd = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 0px 0px 5px 0px;
-    width: 20px;
-    height: 59px;
-    font-size: 20px;
-`
-const ButtonProject = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 0px 1px 5px 42px;
-    width: 12%;
-    height: 12%;
-    font-size: 30px;
-`
-const Wrapper = styled.div`
-    padding: 0 40px 40px 40px;
-`
-const Update = styled.a.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 5px;
-`
-const Delete = styled.a.attrs({
-    className: `btn btn-danger`,
-})`
-    margin: 15px 15px 15px 5px;
-`
 function UserProject() {
     const [modalActive, setModalActive] = useState()
 
