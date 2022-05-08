@@ -2,22 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
 import api from '../../api'
-
-import styled from 'styled-components'
-
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 0px;
-`
-
-const Wrapper = styled.div`
-    padding: 0 40px 40px 40px;
-`
-const Title = styled.h1.attrs({
-    className: 'h1',
-})``
-
+import {Wrapper,Title, Button} from '../account/style/UserAccountStyle'
 
 function Account() {
      const [user, setUser] = useState({});

@@ -2,23 +2,8 @@ import React, {useCallback, useState, useEffect} from 'react'
 import ReactTable from 'react-table'
 import api from '../../api'
 
-import styled from 'styled-components'
-
 import 'react-table/react-table.css'
-
-const Wrapper = styled.div`
-    padding: 0 40px 40px 40px;
-`
-const Update = styled.a.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 5px;
-`
-const Delete = styled.a.attrs({
-    className: `btn btn-danger`,
-})`
-    margin: 15px 15px 15px 5px;
-`
+import {Wrapper,Update, Delete} from '../account/style/UsersListStyle'
 
 function UsersList() {
     const [users, setUsers] = useState({});

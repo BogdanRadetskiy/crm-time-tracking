@@ -14,11 +14,11 @@ import {Update,Delete,ButtonProject,ButtonAdd,Wrapper,Title,Label,InputText,Butt
 
 function UserProject() {
     const [modalActive, setModalActive] = useState()
+    const showModal = () => setModalActive(true);
 
     const [projectsData, setProjectsData] = useState({});
 
     const notify = () => toast("Data save successfully");
-    const showModal = () => setModalActive(true);
     
     const { register, handleSubmit, formState: { errors } } = useForm();
     

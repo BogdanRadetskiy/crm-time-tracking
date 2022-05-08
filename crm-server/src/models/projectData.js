@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const ProjectData = new Schema(
     {
+        name: {
+            type: String,
+            required: true
+        },
         time: {
             type: [String],
             required: true

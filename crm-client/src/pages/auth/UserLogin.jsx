@@ -1,37 +1,11 @@
 import React, { useCallback } from 'react';
 import { useForm } from "react-hook-form";
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import api from '../../api'
 import { emailValidator, passwordValidator } from '../../services/validation-rules'
+import {Wrapper,Title,Label,InputText,Button} from '../auth/style/UserLoginStyle'
 
-const Title = styled.h1.attrs({
-    className: 'h1',
-})``
-
-const Wrapper = styled.div.attrs({
-    className: 'form-group',
-})`
-    margin: 30px 80px;
-`
-
-const Label = styled.label`
-    margin: 5px;
-`
-
-const InputText = styled.input.attrs({
-    className: 'form-control',
-})`
-    margin: 5px;
-    width: 30%;
-`
-
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 5px;
-`
 
 function UserLogin() {
     const { register, handleSubmit, formState: { errors } } = useForm();
