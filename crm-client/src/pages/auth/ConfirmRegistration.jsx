@@ -3,23 +3,7 @@ import { useLocation } from "react-router-dom";
 import qs from 'qs';
 
 import api from '../../api'
-import styled from 'styled-components'
-
-const Title = styled.h1.attrs({
-    className: 'h1',
-})``
-
-const Wrapper = styled.div.attrs({
-    className: 'form-group',
-})`
-    margin: 30px 80px;
-`
-
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 5px;
-`
+import {Wrapper, Title, Button} from '../auth/style/ConfirmRegistrationvStyle'
 
 function ConfirmRegistration() {
     const { search } = useLocation();

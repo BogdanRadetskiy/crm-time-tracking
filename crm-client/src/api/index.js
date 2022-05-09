@@ -90,6 +90,18 @@ export const getUserById = id => api.get(`/users/${id}`)
 export const updateUser = (id, payload) => api.put(`/users/${id}`, payload)
 export const deleteUser = id => api.delete(`/users/${id}`)
 
+export const insertProject = payload => api.post(`/projects`, payload)
+export const getAllProjects = () => api.get(`/projects`)
+export const updateProjectById = (id, payload) => api.put(`/projects/${id}`, payload)
+export const deleteProjectById = id => api.delete(`/projects/${id}`)
+export const getProjectById = id => api.get(`/projects/${id}`)
+export const getProject = () => api.get(`/projects`)
+
+export const insertProjectData = payload => api.post(`/projectsData`, payload)
+export const updateProjectData = (id, payload) => api.put(`/projectsData/${id}`, payload)
+export const getProjectsData = () => api.get(`/projectsData`)
+export const deleteProjectsData = id => api.delete(`/projectsData/${id}`)
+
 const apis = {
     insertMovie,
     getAllMovies,
@@ -109,7 +121,17 @@ const apis = {
     changePassword,
     getUserById,
     updateUser,
-    deleteUser
+    deleteUser,
+    insertProject,
+    getAllProjects,
+    updateProjectById, 
+    deleteProjectById,
+    getProjectById,
+    getProject,
+    insertProjectData,
+    updateProjectData,
+    getProjectsData,
+    deleteProjectsData
 }
 
 export default apis
